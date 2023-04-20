@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout source code
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+        uses: actions/checkout@v3
+        uses: actions/setup-node@v3
         with:
           node-version: 16.14.2
-      - run: npm ci
-      - run: npm test
+        run: npm ci
+        run: npm test
 
       - name: Check Node v
         run: node -v
